@@ -12,6 +12,7 @@ use App\Models\User;
 
 
 
+
 class AuthController extends Controller
 {
     /**
@@ -28,7 +29,7 @@ class AuthController extends Controller
     {
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
-        return User::create($request->all());
+        return User::create($data);
     }
 
     public function login(LoginRequest $request)
