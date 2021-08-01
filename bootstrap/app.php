@@ -77,7 +77,7 @@ $app->configure('app');
 // ]);
 
 $app->routeMiddleware([
-    'auth' => App\Http\Middleware\Authenticate::class,
+    'api' => App\Http\Middleware\Authenticate::class,
 ]);
 
 /*
@@ -97,6 +97,8 @@ $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(\Anik\Form\FormRequestServiceProvider::class);
+$app->register(Prettus\Repository\Providers\LumenRepositoryServiceProvider::class);
+
 
 
 /*
